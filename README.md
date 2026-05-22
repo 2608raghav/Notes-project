@@ -1,16 +1,62 @@
-# React + Vite
+# Notes App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React note-taking application built with Vite and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project allows users to add and delete notes using a minimal form-based interface.
 
-## React Compiler
+Features:
+- Add a note title and details
+- Display notes as cards
+- Remove notes individually
+- Built with React 19, Vite, and Tailwind CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project Structure
 
-## Expanding the ESLint configuration
+- `src/App.jsx` — main app logic and note state
+- `src/main.jsx` — React app entry point
+- `src/index.css` — global styles
+- `package.json` — dependencies and scripts
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open the local URL shown in the terminal.
+
+## Usage
+
+- Enter a note title in the first input field.
+- Enter note details in the textarea.
+- Click `Add Note` to save the note.
+- Notes appear on the right and can be deleted using the `Delete` button.
+
+## Scripts
+
+- `npm run dev` — start Vite development server
+- `npm run build` — build production bundle
+- `npm run preview` — preview production build locally
+- `npm run lint` — run ESLint checks
+
+## Dependencies
+
+- `react`
+- `react-dom`
+- `tailwindcss`
+- `@vitejs/plugin-react`
+- `vite`
+
+## Notes
+
+This app stores notes in React component state only. Refreshing the page will clear all notes.
+
+For persistence, you can extend the app with `localStorage` or backend storage.
